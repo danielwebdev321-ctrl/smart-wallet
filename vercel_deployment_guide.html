@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل النشر الاحترافي على Vercel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        .vibrant-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #ec4899 100%);
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- PALETTE SELECTION: Energetic & Playful (Blue, Pink, Orange) -->
+
+    <header class="vibrant-gradient text-white py-16 px-6 text-center shadow-lg">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">ثورة النشر الحديث مع Vercel</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+            اكتشف كيف تحول Vercel عملية رفع المواقع من كابوس تقني إلى ضغطة زر واحدة. سنأخذك في رحلة من الكود المحلي إلى الرابط المباشر.
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        
+        <!-- Section 1: KPI & Core Metrics -->
+        <section class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-500">
+                    <span class="text-5xl font-black text-blue-600 block mb-2">99.99%</span>
+                    <h3 class="text-xl font-bold">نسبة التوفر (Uptime)</h3>
+                    <p class="text-gray-500 mt-2">استقرار عالمي لموقعك بفضل شبكة Edge المتطورة.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-pink-500">
+                    <span class="text-5xl font-black text-pink-600 block mb-2">10X</span>
+                    <h3 class="text-xl font-bold">أسرع في النشر</h3>
+                    <p class="text-gray-500 mt-2">تقليل وقت الوصول للسوق مقارنة بالسيرفرات التقليدية.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-orange-500">
+                    <span class="text-5xl font-black text-orange-600 block mb-2">0ms</span>
+                    <h3 class="text-xl font-bold">تأخير في التحديث</h3>
+                    <p class="text-gray-500 mt-2">تحديثات فورية بمجرد عمل Push للكود على GitHub.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The 5-Step Process (Diagram without SVG) -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12">رحلة النشر في 5 خطوات ذكية</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <div class="step-card bg-white p-6 rounded-xl shadow-md text-center border-b-4 border-blue-400">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
+                    <h4 class="font-bold mb-2">التسجيل</h4>
+                    <p class="text-sm text-gray-600">الدخول عبر حساب GitHub بضغطة زر.</p>
+                </div>
+                <div class="hidden md:flex items-center justify-center text-blue-300 text-3xl">←</div>
+                <div class="step-card bg-white p-6 rounded-xl shadow-md text-center border-b-4 border-pink-400">
+                    <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
+                    <h4 class="font-bold mb-2">الربط</h4>
+                    <p class="text-sm text-gray-600">منح الصلاحيات للوصول لمستودعاتك.</p>
+                </div>
+                <div class="hidden md:flex items-center justify-center text-pink-300 text-3xl">←</div>
+                <div class="step-card bg-white p-6 rounded-xl shadow-md text-center border-b-4 border-orange-400">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
+                    <h4 class="font-bold mb-2">الاستيراد</h4>
+                    <p class="text-sm text-gray-600">اختيار الـ Repository المراد رفعه.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mt-4">
+                <div class="hidden md:block col-span-2"></div>
+                <div class="step-card bg-white p-6 rounded-xl shadow-md text-center border-b-4 border-purple-400">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
+                    <h4 class="font-bold mb-2">الإعداد</h4>
+                    <p class="text-sm text-gray-600">ضبط إعدادات البناء (Build Settings).</p>
+                </div>
+                <div class="hidden md:flex items-center justify-center text-purple-300 text-3xl">←</div>
+                <div class="step-card bg-white p-6 rounded-xl shadow-md text-center border-b-4 border-green-400">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">5</div>
+                    <h4 class="font-bold mb-2">النشر المباشر</h4>
+                    <p class="text-sm text-gray-600">مبارك! موقعك الآن متاح للجميع.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Charts Analysis -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+            
+            <!-- Comparison Chart -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <h3 class="text-2xl font-bold mb-4 text-blue-700">مقارنة زمن الإعداد (بالدقائق)</h3>
+                <p class="text-gray-600 mb-6">يوضح الرسم البياني التالي الفارق الهائل في الوقت المستغرق لإطلاق موقع ويب بين الطرق التقليدية وVercel.</p>
+                <div class="chart-container">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Framework Support -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <h3 class="text-2xl font-bold mb-4 text-pink-700">توزيع دعم إطارات العمل</h3>
+                <p class="text-gray-600 mb-6">يدعم Vercel مجموعة واسعة من التقنيات، مما يجعله الخيار الأول لمطوري الواجهات الأمامية.</p>
+                <div class="chart-container">
+                    <canvas id="frameworkChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Section 4: Advanced Distribution -->
+        <section class="bg-white p-8 rounded-2xl shadow-xl mb-20">
+            <h3 class="text-2xl font-bold mb-4 text-center">نمو الإنتاجية للمطورين</h3>
+            <p class="text-gray-600 text-center mb-8 max-w-2xl mx-auto">عند استخدام Vercel، تزداد كفاءة المطورين تدريجياً بفضل أدوات المعاينة التلقائية والتعاون السهل.</p>
+            <div class="chart-container" style="max-width: 900px; height: 400px;">
+                <canvas id="productivityChart"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-white py-12 px-6 text-center">
+        <p class="text-lg opacity-70 mb-4">تم تصميم هذا الدليل التفاعلي لدعم المطورين في رحلتهم نحو الابتكار.</p>
+        <div class="flex justify-center gap-6 text-2xl">
+            <span>🚀</span>
+            <span>💻</span>
+            <span>🌐</span>
+        </div>
+        <p class="mt-8 text-sm opacity-50">لا يتم استخدام SVG أو Mermaid JS في هذا المشروع. جميع الرسوم تعتمد على Canvas و HTML/CSS.</p>
+    </footer>
+
+    <script>
+        // Utility for label wrapping (16-char logic)
+        function wrapLabels(labels) {
+            return labels.map(label => {
+                if (label.length <= 16) return label;
+                const words = label.split(' ');
+                const result = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > 16) {
+                        result.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    } else {
+                        currentLine += word + ' ';
+                    }
+                });
+                result.push(currentLine.trim());
+                return result;
+            });
+        }
+
+        // Tooltip config requirement
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // Comparison Chart (Bar Chart)
+        const ctxComp = document.getElementById('comparisonChart').getContext('2d');
+        new Chart(ctxComp, {
+            type: 'bar',
+            data: {
+                labels: wrapLabels(['Vercel Deployment', 'Manual Server VPS', 'Shared Hosting Setup']),
+                datasets: [{
+                    label: 'الزمن بالدقائق',
+                    data: [2, 45, 25],
+                    backgroundColor: ['#3b82f6', '#94a3b8', '#64748b'],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: tooltipConfig
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Framework Chart (Donut Chart)
+        const ctxFrame = document.getElementById('frameworkChart').getContext('2d');
+        new Chart(ctxFrame, {
+            type: 'doughnut',
+            data: {
+                labels: wrapLabels(['Next.js React', 'Vue Nuxt.js', 'Plain HTML CSS JS', 'SvelteKit']),
+                datasets: [{
+                    data: [50, 20, 15, 15],
+                    backgroundColor: ['#3b82f6', '#ec4899', '#f59e0b', '#10b981'],
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: tooltipConfig
+                }
+            }
+        });
+
+        // Productivity Growth (Line Chart)
+        const ctxProd = document.getElementById('productivityChart').getContext('2d');
+        new Chart(ctxProd, {
+            type: 'line',
+            data: {
+                labels: ['الأسبوع 1', 'الأسبوع 2', 'الأسبوع 3', 'الأسبوع 4', 'الأسبوع 5', 'الأسبوع 6'],
+                datasets: [{
+                    label: 'معدل الإنتاجية',
+                    data: [30, 45, 42, 65, 85, 95],
+                    borderColor: '#ec4899',
+                    backgroundColor: 'rgba(236, 72, 153, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#ffffff',
+                    pointBorderColor: '#ec4899',
+                    pointBorderWidth: 3
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: tooltipConfig
+                },
+                scales: {
+                    y: { beginAtZero: true, max: 100 }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
