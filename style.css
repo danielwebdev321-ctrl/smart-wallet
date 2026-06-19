@@ -1,6 +1,6 @@
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: #F0f2f5;
+    background:linear-gradient(to left, rgb(60, 137, 220) , rgb(215, 102, 215));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,79 +9,61 @@ body{
     margin: 0;
 }
 
-.wallet-container{
- background-color:white;
- padding: 30px;
- border-radius: 15px;
- box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
- text-align: center;
- width: 350px;
+h1{
+    font-size: 18px;
 }
 
-.balance-section{
- background-color: #e3f2fd;
- padding: 15px;
- border-radius: 10px;
- font-size: 24px;
- font-weight: bold;
- color: #0d47a1;
- margin-bottom: 20px;
+.control-buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    padding-bottom:5%;
+    justify-content: space-between;
+    
+    background-color: rgb(252, 252, 252);
+    width: 20%;
+    height: 230px;
+    border-radius: 15px;
 }
 
-#balance{
-     font-size: 40px;
-     display: inline-block;
+.control-buttons div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-input{
-    width: 90%;
+.control-buttons div input{
+    width: 80%;
+    height: 30px;
     padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 19px;
+    font-size: 11px;
+    border: solid rgb(0, 106, 255) 1px;
+    border-radius: 10px;
+    direction: rtl;
 }
-
 
 .buttons-row{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
-button{
+.buttons-row div .container{
     display: flex;
-    padding: 12px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    gap: 30px;
+}
+
+.btn-in,
+.btn-out{
+    width: 40%;
+    height: 40px;
+    font-size: 13px;
     font-weight: bold;
-    color: white;
+    border: none;
+    border-radius: 12px;
+    
 }
-
-.btn-in{background-color: #2e7d32;}
-.btn-out{background-color: #c62828;}
-
-.history-section{
-    margin-top: 25px;
-    text-align: right;
-}
-
-ul{
-    list-style: none;
-    padding: 0;
-    max-height: 150px;
-    overflow-y: auto;
-}
-
-li{
-    background: #F9f9f9;
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    border-right: 5 solid #ccc;
-    font-size:  14px;
-}
-
